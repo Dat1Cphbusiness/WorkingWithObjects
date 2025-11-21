@@ -30,7 +30,7 @@ Efter at have gennemført alle 7 levels vil du kunne:
 
 **Klasser:** Car, Dog, BankAccount
 
-**[Se Level 1 opgaver →](level1.md)**
+**[Se Level 1 opgaver →](instructions/level1.md)**
 
 ---
 
@@ -46,7 +46,7 @@ Efter at have gennemført alle 7 levels vil du kunne:
 
 **Klasser:** Student, Product, Book
 
-**[Se Level 2 opgaver →](level2.md)**
+**[Se Level 2 opgaver →](instructions/level2.md)**
 
 ---
 
@@ -62,7 +62,7 @@ Efter at have gennemført alle 7 levels vil du kunne:
 
 **Klasser:** Employee, GameCharacter, ShoppingCart
 
-**[Se Level 3 opgaver →](level3.md)**
+**[Se Level 3 opgaver →](instructions/level3.md)**
 
 ---
 
@@ -78,7 +78,7 @@ Efter at have gennemført alle 7 levels vil du kunne:
 
 **Klasser:** Rectangle, Person, BankAccount2
 
-**[Se Level 4 opgaver →](level4.md)**
+**[Se Level 4 opgaver →](instructions/level4.md)**
 
 ---
 
@@ -94,7 +94,7 @@ Efter at have gennemført alle 7 levels vil du kunne:
 
 **Klasser:** Counter, Builder, Calculator2
 
-**[Se Level 5 opgaver →](level5.md)**
+**[Se Level 5 opgaver →](instructions/level5.md)**
 
 ---
 
@@ -111,7 +111,7 @@ Efter at have gennemført alle 7 levels vil du kunne:
 
 **Klasser:** MathUtils, StudentRegistry, BankSystem
 
-**[Se Level 6 opgaver →](level6.md)**
+**[Se Level 6 opgaver →](instructions/level6.md)**
 
 ---
 
@@ -128,14 +128,14 @@ Efter at have gennemført alle 7 levels vil du kunne:
 
 **Klasser:** Point, Book2, Person2
 
-**[Se Level 7 opgaver →](level7.md)**
+**[Se Level 7 opgaver →](instructions/level7.md)**
 
 ---
 
 ## 🚀 Kom i Gang
 
 ### 1. Download alle filer
-Download alle `.java` filer og `.md` instruktionsfiler til dit projekt.
+klon dette project
 
 ### 2. Åbn Main.java
 `Main.java` indeholder 7 test metoder - én for hvert level.
