@@ -1,4 +1,4 @@
-# Level 5: Classes and Objects Basics - Opgaver
+# Level 1: Classes and Objects Basics - Opgaver
 
 ## Indhold
 - [ ] [Del A: Simple Klasser og Objekter](#del-a-simple-klasser-og-objekter)

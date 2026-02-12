@@ -1,4 +1,4 @@
-# Level 6: Instance Methods
+# Level 2: Instance Methods
 
 ## Begrebsgennemgang
 

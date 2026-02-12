@@ -7,6 +7,7 @@
 - [Level 1: Classes and Objects Basics](concepts/level1.md)
 - [Level 2: Instance Methods](concepts/level2.md)
 - [Level 3: Object Interaction](concepts/level3.md)
+- [Level 4: Information Hiding, toString og Static](concepts/level4.md)
 
 ### Assignments (Opgaver)
 
@@ -14,6 +15,7 @@
 - [Level 1: Classes and Objects Basics](assignments/level1.md)
 - [Level 2: Instance Methods](assignments/level2.md)
 - [Level 3: Object Interaction](assignments/level3.md)
+- [Level 4: Information Hiding, toString og Static](assignments/level4.md)
 
 ## Progression
 
@@ -22,7 +24,7 @@
 | 1     | Classes and Objects Basics | Skabe objekter med instance variables og constructors |
 | 2     | Instance Methods | Lade objekter udføre handlinger på sig selv |
 | 3     | Object Interaction | Få objekter til at kommunikere og samarbejde |
-
+| 4     | Information Hiding, toString og Static | Beskytte data med access modifiers, printe objekter læsbart, og dele data mellem objekter |
 ## Sådan bruger du dette materiale
 
 Dette materiale består af **concepts** (forklaringer) og **assignments** (træningsopgaver) der hører sammen.

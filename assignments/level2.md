@@ -1,4 +1,4 @@
-# Level 6: Instance Methods - Opgaver
+# Level 2: Instance Methods - Opgaver
 
 ## Indhold
 - [ ] [Del A: Void Instance Methods](#del-a-void-instance-methods)

@@ -1,4 +1,4 @@
-# Level 7: Object Interaction - Opgaver
+# Level 3: Object Interaction - Opgaver
 
 ## Indhold
 - [ ] [Del A: Objekter som Parametre](#del-a-objekter-som-parametre)
