@@ -4,9 +4,8 @@
 - [ ] [Del A: Objekter som Parametre](#del-a-objekter-som-parametre)
 - [ ] [Del B: Composition (Objekter Indeholder Objekter)](#del-b-composition-objekter-indeholder-objekter)
 - [ ] [Del C: Arrays i Objekter](#del-c-arrays-i-objekter)
-- [ ] [Del D: Complex Interactions](#del-d-complex-interactions)
-- [ ] [Del E: Advanced Systems](#del-e-advanced-systems)
-- 
+- [ ] [Del D: Complex Interactions](ç#del-d-complex-interactions)
+
 ## Del A: Objekter som Parametre
 
 ### Opgave 1: Basic Object Comparison

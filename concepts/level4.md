@@ -898,11 +898,6 @@ void main() {
 - ✅ `static` methods - utility methods
 - ✅ Forskellen mellem instance og static
 
-**Næste skridt:**
-- Lav øvelserne i `level4_exercises.md`
-- Eksperimenter med access modifiers
-- Implementer toString() i dine klasser
-- Prøv at bruge static til counters
 
 **Husk:**
 - Instance variables: Altid `private`

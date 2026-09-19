@@ -4,7 +4,7 @@
 
 ### Hvad Du Allerede Kan
 
-I Level 6 lærte du at skrive instance methods der arbejder med objektets egen state:
+I Level 2 lærte du at skrive instance methods der arbejder med objektets egen state:
 
 ```java
 class Car {
@@ -932,10 +932,6 @@ Player findPlayer(String name) {
 - ✅ Null checks for sikkerhed
 - ✅ Complex systems med mange interaktioner
 
-**Næste skridt:**
-- Lav øvelserne i `level7_exercises.md`
-- Eksperimenter med object interaction
-- Byg komplekse systemer hvor objekter arbejder sammen
 
 **Husk:**
 - Objekter kan kommunikere og samarbejde

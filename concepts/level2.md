@@ -4,7 +4,7 @@
 
 ### Hvad Du Allerede Kan
 
-I Level 5 lærte du at lave klasser med instance variables og constructors:
+I Level 1 lærte du at lave klasser med instance variables og constructors:
 
 ```java
 class Car {

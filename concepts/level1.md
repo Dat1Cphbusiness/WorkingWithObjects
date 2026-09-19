@@ -735,10 +735,6 @@ class Player {
 - ✅ Gennemløbe objekter i loops
 - ✅ Bruge objekter i conditions
 
-**Næste skridt:**
-- Lav øvelserne i `level5_exercises.md`
-- Eksperimenter med forskellige klasser
-- Prøv at lave objekter i arrays
 
 **Husk:**
 - Klasse = skabelon (blueprint)
