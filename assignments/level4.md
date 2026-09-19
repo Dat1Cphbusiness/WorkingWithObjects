@@ -248,78 +248,9 @@ void main() {
 
 ---
 
-### Opgave 4: Temperature med Private Validation
-Lav en klasse `Temperature` med:
-- `private double celsius`
-
-Lav en konstruktør der validerer at celsius >= -273.15 (absolut nul).
-
-Lav public methods:
-- `double getCelsius()` - getter
-- `void setCelsius(double celsius)` - setter med validering
-- `double getFahrenheit()` - returner celsius * 9/5 + 32
-- `double getKelvin()` - returner celsius + 273.15
-
-I `main()`:
-- Lav en temperatur
-- Prøv at sætte temperatur under absolut nul
-- Print i alle tre enheder
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Temperature {
-    private double celsius;
-    
-    public Temperature(double celsius) {
-        if (celsius >= -273.15) {
-            this.celsius = celsius;
-        } else {
-            this.celsius = -273.15;
-            System.out.println("Temperature set to absolute zero");
-        }
-    }
-    
-    public double getCelsius() {
-        return celsius;
-    }
-    
-    public void setCelsius(double celsius) {
-        if (celsius >= -273.15) {
-            this.celsius = celsius;
-        } else {
-            System.out.println("Cannot go below absolute zero");
-        }
-    }
-    
-    public double getFahrenheit() {
-        return celsius * 9.0 / 5.0 + 32;
-    }
-    
-    public double getKelvin() {
-        return celsius + 273.15;
-    }
-}
-
-void main() {
-    Temperature temp = new Temperature(25);
-    
-    System.out.println("Celsius: " + temp.getCelsius());
-    System.out.println("Fahrenheit: " + temp.getFahrenheit());
-    System.out.println("Kelvin: " + temp.getKelvin());
-    
-    temp.setCelsius(-300);  // Below absolute zero
-    System.out.println("Celsius: " + temp.getCelsius());
-}
-```
-</details>
-
----
-
 ## Del B: toString Method
 
-### Opgave 5: Player toString
+### Opgave 4: Player toString
 Lav en klasse `Player` med:
 - `private String name`
 - `private int level`
@@ -367,61 +298,7 @@ void main() {
 
 ---
 
-### Opgave 6: Book toString med Conditional
-Lav en klasse `Book` med:
-- `private String title`
-- `private String author`
-- `private boolean available`
-
-Lav en konstruktør.
-
-Lav en `toString()` method der returnerer:
-- Hvis available: "{title} by {author} - Available"
-- Hvis ikke available: "{title} by {author} - Checked out"
-
-I `main()`:
-- Lav bøger (nogle available, nogle ikke)
-- Print dem
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Book {
-    private String title;
-    private String author;
-    private boolean available;
-    
-    public Book(String title, String author, boolean available) {
-        this.title = title;
-        this.author = author;
-        this.available = available;
-    }
-    
-    public String toString() {
-        if (available) {
-            return title + " by " + author + " - Available";
-        } else {
-            return title + " by " + author + " - Checked out";
-        }
-    }
-}
-
-void main() {
-    Book book1 = new Book("1984", "George Orwell", true);
-    Book book2 = new Book("Harry Potter", "J.K. Rowling", false);
-    Book book3 = new Book("The Hobbit", "J.R.R. Tolkien", true);
-    
-    System.out.println(book1);
-    System.out.println(book2);
-    System.out.println(book3);
-}
-```
-</details>
-
----
-
-### Opgave 7: BankAccount toString
+### Opgave 5: BankAccount toString
 Lav en klasse `BankAccount` med:
 - `private String owner`
 - `private double balance`
@@ -467,7 +344,7 @@ void main() {
 
 ---
 
-### Opgave 8: Car toString med Composition
+### Opgave 6: Car toString med Composition
 Lav en klasse `Engine` med:
 - `private int horsePower`
 - `private String type`
@@ -529,7 +406,7 @@ void main() {
 
 ## Del C: Static Variables og Methods
 
-### Opgave 9: Player Counter
+### Opgave 7: Player Counter
 Lav en klasse `Player` med:
 - `private String name`
 - `private static int playerCount = 0`
@@ -578,7 +455,7 @@ void main() {
 
 ---
 
-### Opgave 10: BankAccount Total Balance
+### Opgave 8: BankAccount Total Balance
 Lav en klasse `BankAccount` med:
 - `private String owner`
 - `private double balance`
@@ -644,7 +521,7 @@ void main() {
 
 ---
 
-### Opgave 11: StringHelper Utility Class
+### Opgave 9: StringHelper Utility Class
 Lav en klasse `StringHelper` med KUN static methods:
 - `static String reverse(String s)` - returner reversed string
 - `static int countVowels(String s)` - tæl vokaler (a,e,i,o,u)
@@ -703,7 +580,7 @@ void main() {
 
 ---
 
-### Opgave 12: Game Statistics
+### Opgave 10: Game Statistics
 Lav en klasse `Game` med:
 - `private String playerName`
 - `private int score`
@@ -776,7 +653,7 @@ void main() {
 
 ## Del D: ArrayList Integration
 
-### Opgave 13: Player Inventory med ArrayList
+### Opgave 11: Player Inventory med ArrayList
 Lav en klasse `Item` med:
 - `private String name`
 - `private int value`
@@ -893,7 +770,7 @@ void main() {
 
 ---
 
-### Opgave 14: Library med ArrayList
+### Opgave 12: Library med ArrayList
 Lav en klasse `Book` med:
 - `private String title`
 - `private String author`
@@ -1048,116 +925,7 @@ void main() {
 
 ---
 
-### Opgave 15: Student Course Management
-Lav en klasse `Course` med:
-- `private String name`
-- `private int credits`
-
-Lav konstruktør, getters og toString.
-
-Lav en klasse `Student` med:
-- `private String name`
-- `private ArrayList<Course> courses`
-
-Lav konstruktør der initialiserer courses.
-
-Lav methods:
-- `void enrollIn(Course course)` - tilføj kursus
-- `int getTotalCredits()` - sum af alle course credits
-- `boolean isEnrolledIn(String courseName)` - check om studerende er tilmeldt
-- `void printCourses()` - print alle kurser
-
-I `main()`:
-- Lav en studerende
-- Tilmeld til flere kurser
-- Print kurser og total credits
-
-<details>
-<summary>Se svar</summary>
-
-```java
-import java.util.ArrayList;
-
-class Course {
-    private String name;
-    private int credits;
-    
-    public Course(String name, int credits) {
-        this.name = name;
-        this.credits = credits;
-    }
-    
-    public String getName() {
-        return name;
-    }
-    
-    public int getCredits() {
-        return credits;
-    }
-    
-    public String toString() {
-        return name + " (" + credits + " credits)";
-    }
-}
-
-class Student {
-    private String name;
-    private ArrayList<Course> courses;
-    
-    public Student(String name) {
-        this.name = name;
-        this.courses = new ArrayList<>();
-    }
-    
-    public void enrollIn(Course course) {
-        courses.add(course);
-        System.out.println(name + " enrolled in " + course.getName());
-    }
-    
-    public int getTotalCredits() {
-        int total = 0;
-        for (Course course : courses) {
-            total = total + course.getCredits();
-        }
-        return total;
-    }
-    
-    public boolean isEnrolledIn(String courseName) {
-        for (Course course : courses) {
-            if (course.getName().equals(courseName)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    public void printCourses() {
-        System.out.println(name + "'s courses:");
-        for (Course course : courses) {
-            System.out.println("- " + course);
-        }
-        System.out.println("Total credits: " + getTotalCredits());
-    }
-}
-
-void main() {
-    Student student = new Student("Anna");
-    
-    student.enrollIn(new Course("Programming", 10));
-    student.enrollIn(new Course("Mathematics", 5));
-    student.enrollIn(new Course("Web Development", 10));
-    
-    student.printCourses();
-    
-    System.out.println("Enrolled in Programming? " + student.isEnrolledIn("Programming"));
-    System.out.println("Enrolled in Physics? " + student.isEnrolledIn("Physics"));
-}
-```
-</details>
-
----
-
-### Opgave 16: Team med ArrayList og Static Counter
+### Opgave 13: Team med ArrayList og Static Counter
 Lav en klasse `Player` med:
 - `private String name`
 - `private int score`
@@ -1289,7 +1057,7 @@ void main() {
 
 ## Del E: Combined Concepts
 
-### Opgave 17: Complete E-commerce System
+### Opgave 14: Complete E-commerce System
 Lav en klasse `Product` med:
 - `private String name`
 - `private double price`
@@ -1420,7 +1188,7 @@ void main() {
 
 ---
 
-### Opgave 18: Social Media System
+### Opgave 15: Social Media System
 Lav en klasse `Post` med:
 - `private String author`
 - `private String content`
@@ -1570,7 +1338,7 @@ void main() {
 
 ---
 
-### Opgave 19: Complete Game Inventory System
+### Opgave 16: Complete Game Inventory System
 Lav en komplet game inventory system med:
 
 **Item klasse:**

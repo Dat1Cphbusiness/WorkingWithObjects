@@ -78,104 +78,7 @@ void main() {
 
 ---
 
-### Opgave 3: Gem Klasse
-Lav en klasse `Game` med følgende instance variables:
-- `String name`
-- `int players`
-- `boolean multiplayer`
-
-Lav en konstruktør.
-
-I `main()`:
-- Lav et `Game` objekt med navn "Minecraft", 4 spillere, og multiplayer = true
-- Print spillets navn og antal spillere
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Game {
-    String name;
-    int players;
-    boolean multiplayer;
-    
-    Game(String name, int players, boolean multiplayer) {
-        this.name = name;
-        this.players = players;
-        this.multiplayer = multiplayer;
-    }
-}
-
-void main() {
-    Game game = new Game("Minecraft", 4, true);
-    System.out.println(game.name);
-    System.out.println(game.players);
-}
-```
-</details>
-
----
-
-### Opgave 4: Ændre Instance Variables
-Brug `Game` klassen fra opgave 3.
-
-I `main()`:
-- Lav et `Game` objekt med navn "Chess", 2 spillere, og multiplayer = true
-- Print antal spillere
-- Ændr antal spillere til 4
-- Print antal spillere igen
-
-<details>
-<summary>Se svar</summary>
-
-```java
-void main() {
-    Game game = new Game("Chess", 2, true);
-    System.out.println(game.players);  // 2
-    
-    game.players = 4;
-    System.out.println(game.players);  // 4
-}
-```
-</details>
-
----
-
-### Opgave 5: Simpel Pokemon
-Lav en klasse `Pokemon` med:
-- `String name`
-- `int level`
-
-Lav en konstruktør.
-
-I `main()`:
-- Lav en Pokemon med navn "Pikachu" og level 25
-- Print "Pikachu is level 25" ved at bruge objektets instance variables
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Pokemon {
-    String name;
-    int level;
-    
-    Pokemon(String name, int level) {
-        this.name = name;
-        this.level = level;
-    }
-}
-
-void main() {
-    Pokemon pikachu = new Pokemon("Pikachu", 25);
-    System.out.println(pikachu.name + " is level " + pikachu.level);
-}
-```
-</details>
-
----
-
-### Opgave 6: Simpel Spiller
+### Opgave 3: Simpel Spiller
 Lav en klasse `Player` med:
 - `String name`
 - `int score`
@@ -214,7 +117,7 @@ void main() {
 
 ---
 
-### Opgave 7: Item Klasse
+### Opgave 4: Item Klasse
 Lav en klasse `Item` med:
 - `String name`
 - `int price`
@@ -255,8 +158,8 @@ void main() {
 
 ---
 
-### Opgave 8: Beregning med Objekter
-Brug `Item` klassen fra opgave 7.
+### Opgave 5: Beregning med Objekter
+Brug `Item` klassen fra opgave 4.
 
 I `main()`:
 - Lav to items med forskellige priser
@@ -281,7 +184,7 @@ void main() {
 
 ## Del B: Objekter med Metoder og Conditions
 
-### Opgave 9: Print Objekt Metode
+### Opgave 6: Print Objekt Metode
 Lav en klasse `Enemy` med:
 - `String name`
 - `int health`
@@ -326,8 +229,8 @@ void main() {
 
 ---
 
-### Opgave 10: Modificer Objekt
-Brug `Enemy` klassen fra opgave 9.
+### Opgave 7: Modificer Objekt
+Brug `Enemy` klassen fra opgave 6.
 
 Lav en metode `takeDamage(Enemy e, int damage)` der reducerer fjendens health.
 
@@ -357,8 +260,8 @@ void main() {
 
 ---
 
-### Opgave 11: Check Status
-Brug `Enemy` klassen fra opgave 9.
+### Opgave 8: Check Status
+Brug `Enemy` klassen fra opgave 6.
 
 Lav en metode `isAlive(Enemy e)` der returnerer `true` hvis health > 0, ellers `false`.
 
@@ -396,7 +299,7 @@ void main() {
 
 ---
 
-### Opgave 12: Conditional Print
+### Opgave 9: Conditional Print
 Lav en klasse `Car` med:
 - `String brand`
 - `int speed`
@@ -445,7 +348,7 @@ void main() {
 
 ---
 
-### Opgave 13: Level Up Pokemon
+### Opgave 10: Level Up Pokemon
 Lav en klasse `Pokemon` med:
 - `String name`
 - `int level`
@@ -499,7 +402,7 @@ void main() {
 
 ---
 
-### Opgave 14: Sammenlign Objekter
+### Opgave 11: Sammenlign Objekter
 Brug `Player` klassen fra Del A (med name og score).
 
 Lav en metode `printWinner(Player p1, Player p2)` der printer navnet på spilleren med højest score.
@@ -531,7 +434,7 @@ void main() {
 
 ---
 
-### Opgave 15: Flere Conditions
+### Opgave 12: Flere Conditions
 Lav en klasse `BankAccount` med:
 - `String owner`
 - `int balance`
@@ -583,8 +486,8 @@ void main() {
 
 ---
 
-### Opgave 16: Status Check
-Brug `Pokemon` klassen fra opgave 13.
+### Opgave 13: Status Check
+Brug `Pokemon` klassen fra opgave 10.
 
 Lav en metode `printStatus(Pokemon p)` der:
 - Hvis hp <= 0: print "Fainted"
@@ -630,7 +533,7 @@ void main() {
 
 ## Del C: Arrays af Objekter
 
-### Opgave 17: Første Object Array
+### Opgave 14: Array af Objekter
 Lav en klasse `Student` med:
 - `String name`
 - `int age`
@@ -638,9 +541,9 @@ Lav en klasse `Student` med:
 Lav en konstruktør.
 
 I `main()`:
-- Lav et array af `Student` objekter med plads til 3
-- Fyld arrayet med tre studerende
-- Print alle studerendes navne
+- Lav et array af `Student` objekter med plads til 5
+- Fyld arrayet med fem studerende
+- Brug et for-loop til at printe alle studerendes navne
 
 <details>
 <summary>Se svar</summary>
@@ -656,32 +559,6 @@ class Student {
     }
 }
 
-void main() {
-    Student[] students = new Student[3];
-    students[0] = new Student("Anna", 20);
-    students[1] = new Student("Mikkel", 22);
-    students[2] = new Student("Sofie", 21);
-    
-    System.out.println(students[0].name);
-    System.out.println(students[1].name);
-    System.out.println(students[2].name);
-}
-```
-</details>
-
----
-
-### Opgave 18: Loop Gennem Object Array
-Brug `Student` klassen fra opgave 17.
-
-I `main()`:
-- Lav et array med 5 studerende
-- Brug et for-loop til at printe alle studerendes navne
-
-<details>
-<summary>Se svar</summary>
-
-```java
 void main() {
     Student[] students = new Student[5];
     students[0] = new Student("Anna", 20);
@@ -699,7 +576,7 @@ void main() {
 
 ---
 
-### Opgave 19: Print Alle Objekter
+### Opgave 15: Print Alle Objekter
 Brug `Enemy` klassen fra Del B.
 
 Lav en metode `printAllEnemies(Enemy[] enemies)` der bruger et loop til at printe alle enemies' navn og health.
@@ -731,7 +608,7 @@ void main() {
 
 ---
 
-### Opgave 20: Beregn Total
+### Opgave 16: Beregn Total
 Brug `Player` klassen fra Del A (med name og score).
 
 Lav en metode `calculateTotalScore(Player[] players)` der returnerer den totale score af alle spillere.
@@ -773,7 +650,7 @@ void main() {
 
 ---
 
-### Opgave 21: Tæl med Condition
+### Opgave 17: Tæl med Condition
 Brug `Pokemon` klassen fra Del B.
 
 Lav en metode `countHealthy(Pokemon[] team)` der tæller hvor mange Pokemon har hp > 50.
@@ -812,7 +689,7 @@ void main() {
 
 ---
 
-### Opgave 22: Gennemsnit
+### Opgave 18: Gennemsnit
 Brug `Student` klassen. Tilføj en `int grade` instance variable og opdater konstruktøren.
 
 Lav en metode `calculateAverageGrade(Student[] students)` der returnerer gennemsnitskarakteren.
@@ -866,7 +743,7 @@ void main() {
 
 ---
 
-### Opgave 23: Modificer Alle
+### Opgave 19: Modificer Alle
 Brug `Item` klassen fra Del A.
 
 Lav en metode `applyDiscount(Item[] items, int discount)` der reducerer alle items' pris med discount beløbet.
@@ -908,7 +785,7 @@ void main() {
 
 ---
 
-### Opgave 24: Conditional Loop
+### Opgave 20: Conditional Loop
 Brug `Enemy` klassen fra Del B.
 
 Lav en metode `printAliveEnemies(Enemy[] enemies)` der kun printer enemies med health > 0.
@@ -946,7 +823,7 @@ void main() {
 
 ## Del D: Søg og Find i Object Arrays
 
-### Opgave 25: Find Første Match
+### Opgave 21: Find Første Match
 Brug `Player` klassen fra Del A.
 
 Lav en metode `findPlayerByName(Player[] players, String name)` der:
@@ -992,7 +869,7 @@ void main() {
 
 ---
 
-### Opgave 26: Find Højeste
+### Opgave 22: Find Højeste
 Brug `Player` klassen.
 
 Lav en metode `findHighestScore(Player[] players)` der returnerer index af spilleren med højest score.
@@ -1038,7 +915,7 @@ void main() {
 
 ---
 
-### Opgave 27: Find Laveste Health
+### Opgave 23: Find Laveste Health
 Brug `Pokemon` klassen fra Del B.
 
 Lav en metode `findWeakest(Pokemon[] team)` der returnerer index af Pokemon med lavest hp.
@@ -1077,7 +954,7 @@ void main() {
 
 ---
 
-### Opgave 28: Check Findes
+### Opgave 24: Check Findes
 Brug `Item` klassen fra Del A.
 
 Lav en metode `hasItem(Item[] inventory, String itemName)` der returnerer `true` hvis itemet findes i inventory.
@@ -1115,190 +992,9 @@ void main() {
 
 ---
 
-### Opgave 29: Find Alle Over Grænse
-Brug `Student` klassen med grade fra opgave 22.
-
-Lav en metode `countPassing(Student[] students, int passingGrade)` der tæller hvor mange studerende har grade >= passingGrade.
-
-I `main()`:
-- Lav et array med 6 studerende
-- Tæl hvor mange har bestået (grade >= 2)
-- Print antallet
-
-<details>
-<summary>Se svar</summary>
-
-```java
-int countPassing(Student[] students, int passingGrade) {
-    int count = 0;
-    for (int i = 0; i < students.length; i++) {
-        if (students[i].grade >= passingGrade) {
-            count = count + 1;
-        }
-    }
-    return count;
-}
-
-void main() {
-    Student[] students = new Student[6];
-    students[0] = new Student("Anna", 20, 10);
-    students[1] = new Student("Mikkel", 22, 7);
-    students[2] = new Student("Sofie", 21, -3);
-    students[3] = new Student("Lars", 23, 4);
-    students[4] = new Student("Emma", 19, 12);
-    students[5] = new Student("Peter", 21, 2);
-    
-    int passing = countPassing(students, 2);
-    System.out.println("Passing students: " + passing);
-}
-```
-</details>
-
----
-
-### Opgave 30: Find Dyrest Item
-Brug `Item` klassen fra Del A.
-
-Lav en metode `findMostExpensive(Item[] items)` der returnerer index af det dyreste item.
-
-I `main()`:
-- Lav et array med 5 items
-- Find det dyreste
-- Print navn og pris
-
-<details>
-<summary>Se svar</summary>
-
-```java
-int findMostExpensive(Item[] items) {
-    int mostExpensiveIndex = 0;
-    for (int i = 1; i < items.length; i++) {
-        if (items[i].price > items[mostExpensiveIndex].price) {
-            mostExpensiveIndex = i;
-        }
-    }
-    return mostExpensiveIndex;
-}
-
-void main() {
-    Item[] items = new Item[5];
-    items[0] = new Item("Sword", 150, 2.5);
-    items[1] = new Item("Shield", 100, 3.0);
-    items[2] = new Item("Helmet", 75, 1.5);
-    items[3] = new Item("Armor", 300, 5.0);
-    items[4] = new Item("Potion", 50, 0.3);
-    
-    int index = findMostExpensive(items);
-    System.out.println("Most expensive: " + items[index].name + " costs " + items[index].price);
-}
-```
-</details>
-
----
-
-### Opgave 31: Find Første Over Værdi
-Brug `Car` klassen fra Del B.
-
-Lav en metode `findFirstSpeeding(Car[] cars, int speedLimit)` der returnerer index af første bil med speed > speedLimit, eller -1 hvis ingen findes.
-
-I `main()`:
-- Lav et array med 4 biler
-- Find første bil over 130 km/t
-- Print resultatet
-
-<details>
-<summary>Se svar</summary>
-
-```java
-int findFirstSpeeding(Car[] cars, int speedLimit) {
-    for (int i = 0; i < cars.length; i++) {
-        if (cars[i].speed > speedLimit) {
-            return i;
-        }
-    }
-    return -1;
-}
-
-void main() {
-    Car[] cars = new Car[4];
-    cars[0] = new Car("Tesla", 100);
-    cars[1] = new Car("Toyota", 120);
-    cars[2] = new Car("Ferrari", 180);
-    cars[3] = new Car("Ford", 110);
-    
-    int index = findFirstSpeeding(cars, 130);
-    if (index != -1) {
-        System.out.println(cars[index].brand + " is speeding at " + cars[index].speed);
-    } else {
-        System.out.println("No speeding cars");
-    }
-}
-```
-</details>
-
----
-
-### Opgave 32: Tæl Type
-Lav en klasse `Monster` med:
-- `String name`
-- `String type` (f.eks. "Fire", "Water", "Grass")
-- `int level`
-
-Lav en konstruktør.
-
-Lav en metode `countType(Monster[] monsters, String type)` der tæller hvor mange monsters har den type.
-
-I `main()`:
-- Lav et array med 6 monsters af forskellige typer
-- Tæl hvor mange "Fire" type monsters der er
-- Print resultatet
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Monster {
-    String name;
-    String type;
-    int level;
-    
-    Monster(String name, String type, int level) {
-        this.name = name;
-        this.type = type;
-        this.level = level;
-    }
-}
-
-int countType(Monster[] monsters, String type) {
-    int count = 0;
-    for (int i = 0; i < monsters.length; i++) {
-        if (monsters[i].type.equals(type)) {
-            count = count + 1;
-        }
-    }
-    return count;
-}
-
-void main() {
-    Monster[] monsters = new Monster[6];
-    monsters[0] = new Monster("Charmander", "Fire", 5);
-    monsters[1] = new Monster("Squirtle", "Water", 5);
-    monsters[2] = new Monster("Bulbasaur", "Grass", 5);
-    monsters[3] = new Monster("Vulpix", "Fire", 10);
-    monsters[4] = new Monster("Psyduck", "Water", 8);
-    monsters[5] = new Monster("Charizard", "Fire", 36);
-    
-    int fireCount = countType(monsters, "Fire");
-    System.out.println("Fire type monsters: " + fireCount);
-}
-```
-</details>
-
----
-
 ## Del E: Komplekse Scenarier
 
-### Opgave 33: Heal Team
+### Opgave 25: Heal Team
 Brug `Pokemon` klassen fra Del B.
 
 Lav en metode `healTeam(Pokemon[] team, int healAmount)` der:
@@ -1346,7 +1042,7 @@ void main() {
 
 ---
 
-### Opgave 34: Battle System
+### Opgave 26: Battle System
 Brug `Pokemon` klassen.
 
 Lav en metode `attack(Pokemon attacker, Pokemon defender)` der:
@@ -1383,7 +1079,7 @@ void main() {
 
 ---
 
-### Opgave 35: Inventory System
+### Opgave 27: Inventory System
 Brug `Item` klassen fra Del A.
 
 Lav en metode `calculateInventoryValue(Item[] inventory)` der returnerer total værdi af alle items.
@@ -1433,7 +1129,7 @@ void main() {
 
 ---
 
-### Opgave 36: Top 3 Scores
+### Opgave 28: Top 3 Scores
 Brug `Player` klassen.
 
 Lav en metode `printTop3(Player[] players)` der printer navnene på de 3 spillere med højest score.
@@ -1501,7 +1197,7 @@ void main() {
 
 ---
 
-### Opgave 37: Shop System
+### Opgave 29: Shop System
 Brug `Item` og `Player` klasserne.
 
 Tilføj `int money` til `Player` klassen.
@@ -1558,7 +1254,7 @@ void main() {
 
 ---
 
-### Opgave 38: Team Average Level
+### Opgave 30: Team Average Level
 Brug `Pokemon` klassen.
 
 Lav en metode `getAverageLevel(Pokemon[] team)` der returnerer det gennemsnitlige level.
@@ -1606,7 +1302,7 @@ void main() {
 
 ---
 
-### Opgave 39: Swap Objects
+### Opgave 31: Swap Objects
 Brug `Player` klassen.
 
 Lav en metode `swapPlayers(Player[] players, int index1, int index2)` der bytter om på to spillere i arrayet.
@@ -1656,7 +1352,7 @@ void main() {
 
 ---
 
-### Opgave 40: Remove Fainted Pokemon
+### Opgave 32: Remove Fainted Pokemon
 Brug `Pokemon` klassen.
 
 Lav en metode `countAlive(Pokemon[] team)` der returnerer antal Pokemon med hp > 0.
@@ -1727,7 +1423,7 @@ void main() {
 
 ## Del F: Real-World Scenarios og Problemløsning
 
-### Opgave 41: RPG Character System
+### Opgave 33: RPG Character System
 Lav en klasse `Character` med:
 - `String name`
 - `int health`
@@ -1818,68 +1514,7 @@ void main() {
 
 ---
 
-### Opgave 42: Student Grade System
-Brug `Student` klassen med grade fra tidligere.
-
-Lav en metode `printGradeDistribution(Student[] students)` der printer:
-- Antal studerende med grade 12
-- Antal studerende med grade 10 eller 7
-- Antal studerende med grade 4 eller 2
-- Antal studerende med grade 0 eller -3
-
-I `main()`:
-- Lav et array med 10 studerende med forskellige karakterer
-- Print grade distribution
-
-<details>
-<summary>Se svar</summary>
-
-```java
-void printGradeDistribution(Student[] students) {
-    int top = 0;
-    int good = 0;
-    int passing = 0;
-    int failing = 0;
-    
-    for (int i = 0; i < students.length; i++) {
-        if (students[i].grade == 12) {
-            top = top + 1;
-        } else if (students[i].grade == 10 || students[i].grade == 7) {
-            good = good + 1;
-        } else if (students[i].grade == 4 || students[i].grade == 2) {
-            passing = passing + 1;
-        } else {
-            failing = failing + 1;
-        }
-    }
-    
-    System.out.println("Grade 12: " + top);
-    System.out.println("Grade 10/7: " + good);
-    System.out.println("Grade 4/2: " + passing);
-    System.out.println("Grade 0/-3: " + failing);
-}
-
-void main() {
-    Student[] students = new Student[10];
-    students[0] = new Student("Anna", 20, 12);
-    students[1] = new Student("Mikkel", 22, 7);
-    students[2] = new Student("Sofie", 21, 10);
-    students[3] = new Student("Lars", 23, 4);
-    students[4] = new Student("Emma", 19, 12);
-    students[5] = new Student("Peter", 21, 2);
-    students[6] = new Student("Maria", 20, 10);
-    students[7] = new Student("Jonas", 22, 0);
-    students[8] = new Student("Lisa", 21, 7);
-    students[9] = new Student("Simon", 23, -3);
-    
-    printGradeDistribution(students);
-}
-```
-</details>
-
----
-
-### Opgave 43: Pokemon Team Battle
+### Opgave 34: Pokemon Team Battle
 Brug `Pokemon` klassen.
 
 Lav en metode `battleTeams(Pokemon[] team1, Pokemon[] team2)` der:
@@ -1943,7 +1578,7 @@ void main() {
 
 ---
 
-### Opgave 44: Library System
+### Opgave 35: Library System
 Lav en klasse `Book` med:
 - `String title`
 - `String author`
@@ -2035,109 +1670,7 @@ void main() {
 
 ---
 
-### Opgave 45: Store Inventory Management
-Brug `Item` klassen. Tilføj `int stock` instance variable.
-
-Lav følgende metoder:
-- `sellItem(Item[] inventory, String itemName, int quantity)` - reducer stock hvis nok på lager
-- `restockItem(Item[] inventory, String itemName, int quantity)` - øg stock
-- `printLowStock(Item[] inventory, int threshold)` - print items med stock < threshold
-- `calculateTotalInventoryValue(Item[] inventory)` - returner total værdi (price * stock for alle items)
-
-I `main()`:
-- Lav et inventory med 4 items
-- Sælg nogle items
-- Restock nogle items
-- Print low stock items
-- Print total inventory value
-
-<details>
-<summary>Hint</summary>
-
-Hver metode skal finde itemet i arrayet først, så modificere det.
-</details>
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Item {
-    String name;
-    int price;
-    double weight;
-    int stock;
-    
-    Item(String name, int price, double weight, int stock) {
-        this.name = name;
-        this.price = price;
-        this.weight = weight;
-        this.stock = stock;
-    }
-}
-
-void sellItem(Item[] inventory, String itemName, int quantity) {
-    for (int i = 0; i < inventory.length; i++) {
-        if (inventory[i].name.equals(itemName)) {
-            if (inventory[i].stock >= quantity) {
-                inventory[i].stock = inventory[i].stock - quantity;
-                System.out.println("Sold " + quantity + " " + itemName);
-            } else {
-                System.out.println("Not enough stock for " + itemName);
-            }
-            return;
-        }
-    }
-}
-
-void restockItem(Item[] inventory, String itemName, int quantity) {
-    for (int i = 0; i < inventory.length; i++) {
-        if (inventory[i].name.equals(itemName)) {
-            inventory[i].stock = inventory[i].stock + quantity;
-            System.out.println("Restocked " + quantity + " " + itemName);
-            return;
-        }
-    }
-}
-
-void printLowStock(Item[] inventory, int threshold) {
-    System.out.println("Low stock items:");
-    for (int i = 0; i < inventory.length; i++) {
-        if (inventory[i].stock < threshold) {
-            System.out.println("- " + inventory[i].name + ": " + inventory[i].stock);
-        }
-    }
-}
-
-int calculateTotalInventoryValue(Item[] inventory) {
-    int total = 0;
-    for (int i = 0; i < inventory.length; i++) {
-        total = total + (inventory[i].price * inventory[i].stock);
-    }
-    return total;
-}
-
-void main() {
-    Item[] inventory = new Item[4];
-    inventory[0] = new Item("Sword", 150, 2.5, 10);
-    inventory[1] = new Item("Shield", 100, 3.0, 5);
-    inventory[2] = new Item("Potion", 50, 0.3, 20);
-    inventory[3] = new Item("Armor", 300, 5.0, 3);
-    
-    sellItem(inventory, "Sword", 7);
-    sellItem(inventory, "Potion", 15);
-    restockItem(inventory, "Shield", 10);
-    
-    printLowStock(inventory, 5);
-    
-    int value = calculateTotalInventoryValue(inventory);
-    System.out.println("Total inventory value: " + value);
-}
-```
-</details>
-
----
-
-### Opgave 46: Racing Game
+### Opgave 36: Racing Game
 Lav en klasse `Racer` med:
 - `String name`
 - `int position` (starter på 0)
@@ -2236,114 +1769,7 @@ void main() {
 
 ---
 
-### Opgave 47: Card Deck System
-Lav en klasse `Card` med:
-- `String suit` ("Hearts", "Diamonds", "Clubs", "Spades")
-- `String rank` ("2"-"10", "Jack", "Queen", "King", "Ace")
-- `int value` (2-14, hvor Ace = 14)
-
-Lav en konstruktør.
-
-Lav følgende metoder:
-- `createDeck()` - returner et array med alle 52 kort (13 ranks × 4 suits)
-- `printDeck(Card[] deck)` - print alle kort
-- `findHighestCard(Card[] hand)` - returner index af kort med højest værdi
-- `calculateHandValue(Card[] hand)` - returner total værdi af alle kort
-
-I `main()`:
-- Lav et komplet deck (alle 52 kort)
-- Lav en "hand" med 5 kort fra decket
-- Find højeste kort i hånden
-- Beregn hånd værdi
-
-<details>
-<summary>Hint</summary>
-
-For at lave deck: nested loops - outer loop for suits, inner loop for ranks.
-</details>
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Card {
-    String suit;
-    String rank;
-    int value;
-    
-    Card(String suit, String rank, int value) {
-        this.suit = suit;
-        this.rank = rank;
-        this.value = value;
-    }
-}
-
-Card[] createDeck() {
-    Card[] deck = new Card[52];
-    String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
-    String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-    
-    int index = 0;
-    for (int s = 0; s < suits.length; s++) {
-        for (int r = 0; r < ranks.length; r++) {
-            deck[index] = new Card(suits[s], ranks[r], r + 2);
-            index = index + 1;
-        }
-    }
-    
-    return deck;
-}
-
-void printDeck(Card[] deck) {
-    for (int i = 0; i < deck.length; i++) {
-        System.out.println(deck[i].rank + " of " + deck[i].suit);
-    }
-}
-
-int findHighestCard(Card[] hand) {
-    int highestIndex = 0;
-    for (int i = 1; i < hand.length; i++) {
-        if (hand[i].value > hand[highestIndex].value) {
-            highestIndex = i;
-        }
-    }
-    return highestIndex;
-}
-
-int calculateHandValue(Card[] hand) {
-    int total = 0;
-    for (int i = 0; i < hand.length; i++) {
-        total = total + hand[i].value;
-    }
-    return total;
-}
-
-void main() {
-    Card[] deck = createDeck();
-    
-    // Create a hand of 5 cards
-    Card[] hand = new Card[5];
-    hand[0] = deck[0];   // 2 of Hearts
-    hand[1] = deck[13];  // 2 of Diamonds
-    hand[2] = deck[25];  // King of Diamonds
-    hand[3] = deck[38];  // Queen of Clubs
-    hand[4] = deck[51];  // Ace of Spades
-    
-    System.out.println("Your hand:");
-    printDeck(hand);
-    
-    int highest = findHighestCard(hand);
-    System.out.println("\nHighest card: " + hand[highest].rank + " of " + hand[highest].suit);
-    
-    int handValue = calculateHandValue(hand);
-    System.out.println("Hand value: " + handValue);
-}
-```
-</details>
-
----
-
-### Opgave 48: Social Network Simulation
+### Opgave 37: Social Network Simulation
 Lav en klasse `User` med:
 - `String username`
 - `int followers`

@@ -331,73 +331,7 @@ void main() {
 
 ---
 
-### Opgave 6: Restaurant med Address
-Lav en klasse `Address` med:
-- `String street`
-- `String city`
-
-Lav en konstruktør og en `printAddress()` metode.
-
-Lav en klasse `Restaurant` med:
-- `String name`
-- `Address location`
-- `String cuisine`
-
-Lav en konstruktør og en `printInfo()` metode.
-
-I `main()`:
-- Lav en address
-- Lav en restaurant med den address
-- Print restaurant info
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Address {
-    String street;
-    String city;
-    
-    Address(String street, String city) {
-        this.street = street;
-        this.city = city;
-    }
-    
-    void printAddress() {
-        System.out.println(street + ", " + city);
-    }
-}
-
-class Restaurant {
-    String name;
-    Address location;
-    String cuisine;
-    
-    Restaurant(String name, Address location, String cuisine) {
-        this.name = name;
-        this.location = location;
-        this.cuisine = cuisine;
-    }
-    
-    void printInfo() {
-        System.out.println(name + " (" + cuisine + ")");
-        System.out.print("Location: ");
-        location.printAddress();
-    }
-}
-
-void main() {
-    Address addr = new Address("Bredgade 45", "Copenhagen");
-    Restaurant noma = new Restaurant("Noma", addr, "Nordic");
-    
-    noma.printInfo();
-}
-```
-</details>
-
----
-
-### Opgave 7: Character med Weapon
+### Opgave 6: Character med Weapon
 Lav en klasse `Weapon` med:
 - `String name`
 - `int damage`
@@ -488,7 +422,7 @@ void main() {
 
 ---
 
-### Opgave 8: Player med Inventory Item
+### Opgave 7: Player med Inventory Item
 Lav en klasse `Item` med:
 - `String name`
 - `double weight`
@@ -587,7 +521,7 @@ void main() {
 
 ## Del C: Arrays i Objekter
 
-### Opgave 9: Team med Players
+### Opgave 8: Team med Players
 Lav en klasse `Player` med:
 - `String name`
 - `int score`
@@ -677,7 +611,7 @@ void main() {
 
 ---
 
-### Opgave 10: Shop med Items
+### Opgave 9: Shop med Items
 Lav en klasse `Item` med:
 - `String name`
 - `double price`
@@ -792,248 +726,9 @@ void main() {
 
 ---
 
-### Opgave 11: Restaurant med Menu
-Lav en klasse `Dish` med:
-- `String name`
-- `double price`
-- `int calories`
-
-Lav en konstruktør og en `boolean isHealthy()` method (calories < 500).
-
-Lav en klasse `Restaurant` med:
-- `String name`
-- `Dish[] menu`
-- `int dishCount`
-
-Lav en konstruktør.
-
-Lav instance methods:
-- `void addDish(Dish dish)` - tilføj dish til menu
-- `int countHealthyOptions()` - returner antal healthy dishes
-- `double getAveragePrice()` - returner gennemsnitspris
-- `void printMenu()` - print alle dishes
-
-I `main()`:
-- Lav en restaurant
-- Tilføj 6 dishes
-- Print menu
-- Print antal healthy options
-- Print average price
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Dish {
-    String name;
-    double price;
-    int calories;
-    
-    Dish(String name, double price, int calories) {
-        this.name = name;
-        this.price = price;
-        this.calories = calories;
-    }
-    
-    boolean isHealthy() {
-        return calories < 500;
-    }
-}
-
-class Restaurant {
-    String name;
-    Dish[] menu;
-    int dishCount;
-    
-    Restaurant(String name, int maxDishes) {
-        this.name = name;
-        this.menu = new Dish[maxDishes];
-        this.dishCount = 0;
-    }
-    
-    void addDish(Dish dish) {
-        if (dishCount < menu.length) {
-            menu[dishCount] = dish;
-            dishCount = dishCount + 1;
-        }
-    }
-    
-    int countHealthyOptions() {
-        int count = 0;
-        for (int i = 0; i < dishCount; i++) {
-            if (menu[i].isHealthy()) {
-                count = count + 1;
-            }
-        }
-        return count;
-    }
-    
-    double getAveragePrice() {
-        if (dishCount == 0) {
-            return 0;
-        }
-        double total = 0;
-        for (int i = 0; i < dishCount; i++) {
-            total = total + menu[i].price;
-        }
-        return total / dishCount;
-    }
-    
-    void printMenu() {
-        System.out.println("=== " + name + " Menu ===");
-        for (int i = 0; i < dishCount; i++) {
-            System.out.println(menu[i].name + " - " + menu[i].price + " kr - " + 
-                             menu[i].calories + " cal");
-        }
-    }
-}
-
-void main() {
-    Restaurant bistro = new Restaurant("The Bistro", 10);
-    
-    bistro.addDish(new Dish("Salad", 75, 320));
-    bistro.addDish(new Dish("Burger", 95, 850));
-    bistro.addDish(new Dish("Pasta", 89, 650));
-    bistro.addDish(new Dish("Soup", 65, 280));
-    bistro.addDish(new Dish("Steak", 145, 720));
-    bistro.addDish(new Dish("Fish", 120, 450));
-    
-    bistro.printMenu();
-    System.out.println("\nHealthy options: " + bistro.countHealthyOptions());
-    System.out.println("Average price: " + bistro.getAveragePrice() + " kr");
-}
-```
-</details>
-
----
-
-### Opgave 12: Garage med Cars
-Lav en klasse `Car` med:
-- `String brand`
-- `int year`
-- `boolean damaged`
-
-Lav en konstruktør.
-
-Lav instance methods:
-- `void repair()` - sætter damaged til false
-- `boolean needsRepair()` - returner damaged
-
-Lav en klasse `Garage` med:
-- `String name`
-- `Car[] cars`
-- `int carCount`
-
-Lav en konstruktør.
-
-Lav instance methods:
-- `void addCar(Car car)` - tilføj car
-- `void repairAll()` - repair alle biler der needs repair
-- `int countDamaged()` - returner antal damaged cars
-- `void printGarage()` - print alle biler
-
-I `main()`:
-- Lav en garage
-- Tilføj 5 biler (nogle damaged)
-- Print antal damaged
-- Repair all
-- Print antal damaged igen
-
-<details>
-<summary>Se svar</summary>
-
-```java
-class Car {
-    String brand;
-    int year;
-    boolean damaged;
-    
-    Car(String brand, int year, boolean damaged) {
-        this.brand = brand;
-        this.year = year;
-        this.damaged = damaged;
-    }
-    
-    void repair() {
-        damaged = false;
-        System.out.println(brand + " repaired!");
-    }
-    
-    boolean needsRepair() {
-        return damaged;
-    }
-}
-
-class Garage {
-    String name;
-    Car[] cars;
-    int carCount;
-    
-    Garage(String name, int maxCars) {
-        this.name = name;
-        this.cars = new Car[maxCars];
-        this.carCount = 0;
-    }
-    
-    void addCar(Car car) {
-        if (carCount < cars.length) {
-            cars[carCount] = car;
-            carCount = carCount + 1;
-        }
-    }
-    
-    void repairAll() {
-        System.out.println("\nRepairing all damaged cars...");
-        for (int i = 0; i < carCount; i++) {
-            if (cars[i].needsRepair()) {
-                cars[i].repair();
-            }
-        }
-    }
-    
-    int countDamaged() {
-        int count = 0;
-        for (int i = 0; i < carCount; i++) {
-            if (cars[i].damaged) {
-                count = count + 1;
-            }
-        }
-        return count;
-    }
-    
-    void printGarage() {
-        System.out.println("=== " + name + " ===");
-        for (int i = 0; i < carCount; i++) {
-            System.out.println(cars[i].brand + " (" + cars[i].year + ") - Damaged: " + 
-                             cars[i].damaged);
-        }
-    }
-}
-
-void main() {
-    Garage garage = new Garage("Joe's Garage", 10);
-    
-    garage.addCar(new Car("Toyota", 2018, false));
-    garage.addCar(new Car("Ford", 2015, true));
-    garage.addCar(new Car("Honda", 2020, true));
-    garage.addCar(new Car("BMW", 2019, false));
-    garage.addCar(new Car("Audi", 2017, true));
-    
-    garage.printGarage();
-    System.out.println("\nDamaged cars: " + garage.countDamaged());
-    
-    garage.repairAll();
-    
-    System.out.println("\nDamaged cars: " + garage.countDamaged());
-}
-```
-</details>
-
----
-
 ## Del D: Complex Interactions
 
-### Opgave 13: Customer Buying from Shop
+### Opgave 10: Customer Buying from Shop
 Lav en klasse `Product` med:
 - `String name`
 - `double price`
@@ -1118,7 +813,7 @@ void main() {
 
 ---
 
-### Opgave 14: Team Battle
+### Opgave 11: Team Battle
 Lav en klasse `Player` med:
 - `String name`
 - `int health`
@@ -1244,7 +939,7 @@ void main() {
 
 ---
 
-### Opgave 15: Driver og Car System
+### Opgave 12: Driver og Car System
 Lav en klasse `Driver` med:
 - `String name`
 - `int skill` (0-100)
@@ -1336,7 +1031,7 @@ void main() {
 
 ---
 
-### Opgave 16: Library Book Loan System
+### Opgave 13: Library Book Loan System
 Lav en klasse `Book` med:
 - `String title`
 - `boolean available`
