@@ -328,7 +328,7 @@ void main() {
 
 ## Arrays af Objekter
 
-Du kan lave arrays der indeholder objekter:
+Ofte har man brug for opbevare objekter af samme type i en beholder, så man nemt kan holde styr på hvor mange der er, og udføre handlinger på dem. Arrays udgør sådan en beholder:
 
 ```java
 void main() {
