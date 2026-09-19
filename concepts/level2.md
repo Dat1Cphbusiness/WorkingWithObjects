@@ -901,10 +901,6 @@ void accelerateAndRefuelAndBrake() {
 - ✅ Kombinere user input med instance methods
 - ✅ Beregninger i instance methods
 
-**Næste skridt:**
-- Lav øvelserne i `level6_exercises.md`
-- Eksperimenter med forskellige typer instance methods
-- Prøv at kombinere void og return methods
 
 **Husk:**
 - Instance methods tilhører objektet
