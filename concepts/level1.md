@@ -277,6 +277,30 @@ void main() {
 }
 ```
 
+### Hvorfor ændres `pikachu`?
+
+Sidste uge så vi **pass-by-value**: Når en variabel sendes ind i en metode, er parameteren en *kopi*. Ændrer metoden parameteren, forbliver den oprindelige variabel uændret.
+
+Men her ændres `pikachu` jo tydeligvis. Er det så ikke pass-by-value?
+
+Jo, det er det stadig. Forskellen er, hvad variablen indeholder:
+
+- En `int` indeholder selve tallet.
+- En variabel af typen `Pokemon` indeholder en **reference** til et Pokemon-objekt, altså en slags adresse til, hvor objektet ligger i hukommelsen.
+
+Når vi kalder `takeDamage(pikachu, 30)`, er det *referencen*, der bliver kopieret:
+
+```
+main:          pikachu ──┐
+                         ├──►  Pokemon-objekt (hp = 100)
+takeDamage:    p ────────┘
+```
+
+`pikachu` og `p` er to forskellige variabler, men de peger på **det samme objekt**. Når metoden ændrer `p.hp`, følger den referencen hen til objektet og ændrer det. Bagefter ser `main` ændringen, fordi `pikachu` peger på det samme objekt.
+
+Man kan sige, at vi kopierer adressen og ikke huset. Hvis jeg giver dig en kopi af min adresse, og du maler døren rød, så er min dør også rød.
+
+
 ---
 
 ## Flere Objekter af Samme Klasse
